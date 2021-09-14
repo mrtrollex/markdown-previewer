@@ -1,0 +1,36 @@
+.comic-text {
+  transform: scale(0.5);
+  $extra-large: 110px;
+  $yellow: #ffed28;
+  $red: #ff3838;
+  $random-text: 'Markdown Previewer';
+  $stroke-width: $extra-large * 0.35;
+  font-family: cursive;
+  position: relative;
+  font-size: $extra-large;
+  text-transform: uppercase;
+  word-spacing: -12px;
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: $stroke-width;
+  -webkit-text-stroke-color: white;
+  &:before {
+    position: absolute;
+    content: $random-text;
+    top: 3px;
+    left: 12px;
+    color: $yellow;
+    $stroke-width: $extra-large * 0.08;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: lighten(black, 15%);
+  }
+  &:after {
+    position: absolute;
+    content: $random-text;
+    top: 0;
+    left: 0;
+    color: lighten($red, 5%);
+    $stroke-width: $extra-large * 0.06;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: lighten(black, 15%);
+  }
+}
